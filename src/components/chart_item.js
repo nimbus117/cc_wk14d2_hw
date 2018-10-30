@@ -1,10 +1,10 @@
 import React from 'react';
 
 const ChartItem = props => {
-    console.log(props.details);
+  const item = props.details;
   return(
     <li className='chart-item'> 
-      {props.details.title.label}
+      {item['im:name'].label} ({item['im:artist'].label})
     </li>
   )
 }
