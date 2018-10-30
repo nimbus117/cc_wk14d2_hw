@@ -10,7 +10,7 @@ class ChartBox extends Component {
   componentDidMount() {
     fetch('https://itunes.apple.com/gb/rss/topsongs/limit=20/json')
       .then(response => response.json())
-      .then(json => this.setState({songs: json}))
+      .then(json => this.setState({songs: json.feed.entry}))
       .catch(error => console.log(error));
   }
 
@@ -22,3 +22,5 @@ class ChartBox extends Component {
     )
   }
 }
+
+export default ChartBox;
