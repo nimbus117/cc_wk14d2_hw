@@ -10,10 +10,9 @@ const ChartList = props => {
     })
   }
   else if (props.chart.results) {
-    chart = props.chart.results.map(item => {
-      return <ChartItem title={item.name} artist={item.artistName} key={item.id} />;
-    })
+    chart = props.chart.results.map(item => <ChartItem title={item.name} artist={item.artistName} key={item.id} />)
   }
+
   if (chart === null) {return null}
   else {return <div className='chart-list'><ol>{chart}</ol></div>}
 }
